@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 368f141c4f8b23749a497ef03e448e8a
+timeCreated: 1522283791
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BackWall
+    100002: BlackUnlit
+    100004: Carpet
+    100006: Chair
+    100008: CoffeeTable
+    100010: Desk
+    100012: DeskLight
+    100014: Elevator
+    100016: Floor
+    100018: FloorLight
+    100020: FloorLightGlow
+    100022: ForegroundDetail
+    100024: FrontWall
+    100026: HologramEmitters
+    100028: HologramLight
+    100030: HologramLight02
+    100032: Magazine
+    100034: SecurityGate
+    100036: SecurityGateBeams
+    100038: //RootNode
+    100040: WallPipe
+    100042: WallTrim
+    100044: WallVents
+    400000: BackWall
+    400002: BlackUnlit
+    400004: Carpet
+    400006: Chair
+    400008: CoffeeTable
+    400010: Desk
+    400012: DeskLight
+    400014: Elevator
+    400016: Floor
+    400018: FloorLight
+    400020: FloorLightGlow
+    400022: ForegroundDetail
+    400024: FrontWall
+    400026: HologramEmitters
+    400028: HologramLight
+    400030: HologramLight02
+    400032: Magazine
+    400034: SecurityGate
+    400036: SecurityGateBeams
+    400038: //RootNode
+    400040: WallPipe
+    400042: WallTrim
+    400044: WallVents
+    2100000: SecurityRoomDesk
+    2100002: LazerWall
+    2100004: SecurityRoomWallVents
+    2100006: SecurityRoomSecurityGate
+    2100008: SecurityRoomMagazines
+    2100010: BlackUnlit
+    2100012: SecurityRoomForeGroundDetail
+    2100014: SecurityRoomCarpet
+    2100016: SecurityRoomFloor
+    2100018: SecurityRoomWallsGrey
+    2100020: SecurityRoomFloorLight
+    2100022: SecurityRoomWallsRed
+    2100024: SecurityRoomCoffeeTable
+    2100026: SecurityRoomFloorLightGlow
+    2100028: SecurityRoomHologramLight
+    2100030: SecurityRoomElevator
+    2100032: SecurityRoomChair
+    2100034: SecurityRoomHologramLight02
+    2300000: BackWall
+    2300002: BlackUnlit
+    2300004: Carpet
+    2300006: Chair
+    2300008: CoffeeTable
+    2300010: Desk
+    2300012: DeskLight
+    2300014: Elevator
+    2300016: Floor
+    2300018: FloorLight
+    2300020: FloorLightGlow
+    2300022: ForegroundDetail
+    2300024: FrontWall
+    2300026: HologramEmitters
+    2300028: HologramLight
+    2300030: HologramLight02
+    2300032: Magazine
+    2300034: SecurityGate
+    2300036: SecurityGateBeams
+    2300038: WallPipe
+    2300040: WallTrim
+    2300042: WallVents
+    3300000: BackWall
+    3300002: BlackUnlit
+    3300004: Carpet
+    3300006: Chair
+    3300008: CoffeeTable
+    3300010: Desk
+    3300012: DeskLight
+    3300014: Elevator
+    3300016: Floor
+    3300018: FloorLight
+    3300020: FloorLightGlow
+    3300022: ForegroundDetail
+    3300024: FrontWall
+    3300026: HologramEmitters
+    3300028: HologramLight
+    3300030: HologramLight02
+    3300032: Magazine
+    3300034: SecurityGate
+    3300036: SecurityGateBeams
+    3300038: WallPipe
+    3300040: WallTrim
+    3300042: WallVents
+    4300000: Desk
+    4300002: SecurityGateBeams
+    4300004: WallVents
+    4300006: SecurityGate
+    4300008: Magazine
+    4300010: BlackUnlit
+    4300012: ForegroundDetail
+    4300014: Carpet
+    4300016: Floor
+    4300018: WallTrim
+    4300020: FloorLight
+    4300022: BackWall
+    4300024: CoffeeTable
+    4300026: FloorLightGlow
+    4300028: HologramLight
+    4300030: Elevator
+    4300032: HologramEmitters
+    4300034: FrontWall
+    4300036: Chair
+    4300038: WallPipe
+    4300040: DeskLight
+    4300042: HologramLight02
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
