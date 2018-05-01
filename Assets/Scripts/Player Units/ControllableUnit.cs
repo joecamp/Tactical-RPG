@@ -93,4 +93,10 @@ public class ControllableUnit : InteractableObject, IPauseable {
         }
         movement.PauseMovement (value);
     }
+
+
+    protected void OnCollisionEnter (Collision collision) {
+        if (collision.collider.tag == "ControllableUnit")
+            UnitCollisionManager.Instance.HandleUnitCollision (this, collision);
+    }
 }

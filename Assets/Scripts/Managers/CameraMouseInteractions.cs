@@ -8,8 +8,6 @@ public class CameraMouseInteractions : MonoBehaviour {
     [SerializeField] float selectionRectBorderThickness = 2f;
     [SerializeField] float maxMouseDistanceForDrag = 10f;
 
-    public GameManager gameManager;
-
     bool isRectSelecting = false;
     Vector3 dragStartPosition;
 
@@ -58,7 +56,7 @@ public class CameraMouseInteractions : MonoBehaviour {
     /// </summary>
     protected void SelectControllableEntitiesInRectangle () {
         if (isRectSelecting) {
-            foreach (ControllableUnit cu in gameManager.playerUnits) {
+            foreach (ControllableUnit cu in GameManager.Instance.playerUnits) {
                 if (IsWithinSelectionBounds (cu.gameObject)) {
                     if (!cu.IsSelected) {
                         cu.SelectUnit ();
@@ -100,7 +98,7 @@ public class CameraMouseInteractions : MonoBehaviour {
             Debug.DrawLine (ray.origin, hit.point);
             GameObject g = hit.collider.gameObject;
 
-            gameManager.HandleClickOnGameObject (g, hit.point);
+            GameManager.Instance.HandleClickOnGameObject (g, hit.point);
         }
     }
 
