@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class PartyFormations {
 
-    public static float formationOffset = 1.5f;
+    public static float formationOffset = 2f;
 
     public static void PartyCircleMove (List<ControllableUnit> selectedUnits, Vector3 formationCenter) {
         // Calculate the average position of the selected units

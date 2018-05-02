@@ -1518,7 +1518,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   delay: 0
   duration: 0.5
-  easeType: 2
+  easeType: 1
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -1906,7 +1906,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   delay: 0
   duration: 0.5
-  easeType: 2
+  easeType: 1
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -4274,7 +4274,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   delay: 0
   duration: 0.5
-  easeType: 2
+  easeType: 1
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -29960,7 +29960,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   delay: 0
   duration: 0.5
-  easeType: 2
+  easeType: 1
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -33238,7 +33238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1715490580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36328,7 +36328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a4edc7083861b428fda396c2c5bfef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 840190666}
 --- !u!4 &1950737120
 Transform:
   m_ObjectHideFlags: 0

@@ -48,6 +48,7 @@ public class GameManager : Singleton<GameManager> {
 
     public void HandleHoverOnInteractableObject (InteractableObject o) {
         if (o != hoveredObject) {
+            if (hoveredObject) hoveredObject.ExitHover ();
             hoveredObject = o;
             hoveredObject.EnterHover ();
         }
