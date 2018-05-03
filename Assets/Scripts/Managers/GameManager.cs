@@ -99,7 +99,7 @@ public class GameManager : Singleton<GameManager> {
     /// </summary>
     protected void HandleClickOnControllableUnit (GameObject g, Vector3 clickPoint) {
         // Grab a reference to the GameObject's ControllableUnit component
-        ControllableUnit cu = g.GetComponent<ControllableUnit> ();
+        ControllableUnit cu = g.GetComponentInParent<ControllableUnit> ();
         if (cu == null) return;
 
         // Deselect all currently selected units and select the clicked unit

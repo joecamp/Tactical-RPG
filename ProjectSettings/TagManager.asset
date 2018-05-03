@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Floor
   - ControllableUnit
-  - ControllableEntity
-  - AstarUnit
   layers:
   - Default
   - TransparentFX
@@ -19,7 +17,7 @@ TagManager:
   - 
   - Unit
   - Obstacle
-  - 
+  - SelectionRing
   - 
   - 
   - 

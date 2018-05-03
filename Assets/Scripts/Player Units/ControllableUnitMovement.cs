@@ -13,6 +13,7 @@ public class ControllableUnitMovement : MonoBehaviour {
     [SerializeField] float movingTurnSpeed = 360;
     [SerializeField] float stationaryTurnSpeed = 180;
     [SerializeField] float moveSpeedMultiplier = 1f;
+    [SerializeField] float offMeshLinkSpeed = 5f;
 
     // References
     new Rigidbody rigidbody;
@@ -65,6 +66,13 @@ public class ControllableUnitMovement : MonoBehaviour {
                 controllableUnit.ReachedDestination ();
                 Move (Vector3.zero);
                 agent.updatePosition = false;
+            }
+
+            if (agent.isOnOffMeshLink) {
+                agent.speed = offMeshLinkSpeed;
+            }
+            else {
+                agent.speed = 1f;
             }
         }
     }
