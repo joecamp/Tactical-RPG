@@ -69,13 +69,10 @@ public class ControllableUnitMovement : MonoBehaviour {
                 Move (Vector3.zero);
                 agent.updatePosition = false;
             }
+        }
 
-            if (agent.isOnOffMeshLink) {
-                agent.speed = offMeshLinkSpeed;
-            }
-            else {
-                agent.speed = 1f;
-            }
+        if (Input.GetKeyDown (KeyCode.A)) {
+            animator.SetTrigger ("EnterCode");
         }
     }
 

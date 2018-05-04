@@ -6,8 +6,9 @@ using UnityEngine;
 // TODO: Implement an activation position and unit behavior (animation?).
 public class InteractableToggleObject : MonoBehaviour, IInteractable {
     [SerializeField] bool isToggled;
-    public UnityEvent OnToggleOn;
-    public UnityEvent OnToggleOff;
+    public Transform interactTransform;
+    [SerializeField] UnityEvent OnToggleOn;
+    [SerializeField] UnityEvent OnToggleOff;
 
     public void Click () {
         Toggle (!isToggled);

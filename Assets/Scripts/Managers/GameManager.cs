@@ -115,6 +115,7 @@ public class GameManager : Singleton<GameManager> {
         cu.SelectUnit ();
     }
 
+
     /// <summary>
     /// Handle a click on an InteractableObject
     /// </summary>
