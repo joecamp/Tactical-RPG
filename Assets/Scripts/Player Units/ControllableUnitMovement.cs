@@ -8,7 +8,9 @@ using UnityEngine.AI;
 [RequireComponent (typeof (NavMeshObstacle))]
 public class ControllableUnitMovement : MonoBehaviour {
 
+#pragma warning disable 414
     [SerializeField] NavMeshPathStatus pathStatus;
+#pragma warning restore 414
 
     [SerializeField] float movingTurnSpeed = 360;
     [SerializeField] float stationaryTurnSpeed = 180;

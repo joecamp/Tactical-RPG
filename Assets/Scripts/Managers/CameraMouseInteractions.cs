@@ -2,7 +2,6 @@
 using UnityEngine.EventSystems;
 
 public class CameraMouseInteractions : MonoBehaviour {
-
     [SerializeField] Color selectionRectColor;
     [SerializeField] Color selectionRectBorderColor;
     [SerializeField] float selectionRectBorderThickness = 2f;

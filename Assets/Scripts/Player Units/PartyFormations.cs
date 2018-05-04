@@ -2,9 +2,9 @@
 using UnityEngine;
 
 public static class PartyFormations {
-
     public static float formationOffset = 2f;
 
+    // TODO: Make the 'circle' rotate to take into account direction from squad center to formation center
     public static void PartyCircleMove (List<ControllableUnit> selectedUnits, Vector3 formationCenter) {
         // Calculate the average position of the selected units
         Vector3 averagePosition = new Vector3 ();
@@ -14,10 +14,10 @@ public static class PartyFormations {
         averagePosition /= selectedUnits.Count;
 
         // Calculate the direction from the average position to the formation center
-        Vector2 pos1 = new Vector2 (averagePosition.x, averagePosition.z);
-        Vector2 pos2 = new Vector2 (formationCenter.x, formationCenter.z);
-        float centerAngle = Vector2.Angle (pos1, pos2);
-        float extra = (Vector2.SignedAngle (pos1, pos2));
+        //Vector2 pos1 = new Vector2 (averagePosition.x, averagePosition.z);
+        //Vector2 pos2 = new Vector2 (formationCenter.x, formationCenter.z);
+        //float centerAngle = Vector2.Angle (pos1, pos2);
+        //float extra = (Vector2.SignedAngle (pos1, pos2));
 
         float increment = 360f / selectedUnits.Count;
 

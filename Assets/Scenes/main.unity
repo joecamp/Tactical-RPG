@@ -3342,15 +3342,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010984663340, guid: 706e6270ca3a68a46a4455daaeaeafd1, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010984663340, guid: 706e6270ca3a68a46a4455daaeaeafd1, type: 2}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010984663340, guid: 706e6270ca3a68a46a4455daaeaeafd1, type: 2}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1000013720703938, guid: 706e6270ca3a68a46a4455daaeaeafd1, type: 2}
       propertyPath: m_Layer
@@ -3363,6 +3363,10 @@ Prefab:
     - target: {fileID: 4000010984663340, guid: 706e6270ca3a68a46a4455daaeaeafd1, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013720703938, guid: 706e6270ca3a68a46a4455daaeaeafd1, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64000013640084084, guid: 706e6270ca3a68a46a4455daaeaeafd1, type: 2}
@@ -3390,6 +3394,72 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.2, z: 1}
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &183631250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 183631248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86fc9ede7f07c4d9b44674c719b7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isToggled: 0
+  OnToggleOn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 555496582}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Toggle On
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 702257930}
+        m_MethodName: ActivateLasers
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnToggleOff:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 555496582}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 702257930}
+        m_MethodName: ActivateLasers
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &187806044
 GameObject:
   m_ObjectHideFlags: 0
@@ -17337,6 +17407,7 @@ GameObject:
   - component: {fileID: 702257927}
   - component: {fileID: 702257929}
   - component: {fileID: 702257928}
+  - component: {fileID: 702257930}
   m_Layer: 0
   m_Name: SecurityGateBeams
   m_TagString: Untagged
@@ -17398,6 +17469,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702257926}
   m_Mesh: {fileID: 4300002, guid: 368f141c4f8b23749a497ef03e448e8a, type: 3}
+--- !u!114 &702257930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 702257926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d08318bf2db834a9ad51f211f28f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.3
 --- !u!1 &702558822
 GameObject:
   m_ObjectHideFlags: 0
@@ -22445,9 +22528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef96443d3004394d8ca936f06d89bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verbose: 0
   postProcessingEffects: {fileID: 1168315240}
   UIManager: {fileID: 1601392149}
-  hoveredObject: {fileID: 0}
   selectedUnits: []
 --- !u!1 &843122467
 GameObject:
@@ -26946,6 +27029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVignIntensity: 0.45
   vignDuration: 0.5
+  maxDofFocalLength: 50
+  dofDuration: 0.5
 --- !u!1 &1169115932
 GameObject:
   m_ObjectHideFlags: 0

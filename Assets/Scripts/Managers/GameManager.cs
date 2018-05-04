@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager> {
-
+    public bool verbose;
     [SerializeField] PostProcessingEffects postProcessingEffects;
     [SerializeField] UIManager UIManager;
-    [SerializeField] InteractableObject hoveredObject;
-    public bool isPaused {
-        get; private set;
-    }
-    public List<ControllableUnit> playerUnits {
-        get; private set;
-    }
+    [SerializeField] IInteractable hoveredObject;
+    public bool isPaused { get; private set; }
+    public bool isMenuPaused { get; private set; }
+    public List<ControllableUnit> playerUnits { get; private set; }
     public List<ControllableUnit> selectedUnits;
 
     protected void Awake () {
@@ -27,7 +24,7 @@ public class GameManager : Singleton<GameManager> {
             ToggleGameMenu ();
         }
         if (Input.GetKeyDown (KeyCode.Space)) {
-            ToggleActivePause ();
+            ToggleActivePause (true);
         }
     }
 
@@ -42,13 +39,16 @@ public class GameManager : Singleton<GameManager> {
             case "ControllableUnit":
                 HandleClickOnControllableUnit (g, clickPoint);
                 break;
+            case "Interactable":
+                HandleClickOnInteractableObject (g);
+                break;
         }
     }
 
 
-    public void HandleHoverOnInteractableObject (InteractableObject o) {
+    public void HandleHoverOnInteractableObject (IInteractable o) {
         if (o != hoveredObject) {
-            if (hoveredObject) hoveredObject.ExitHover ();
+            if (hoveredObject != null) hoveredObject.ExitHover ();
             hoveredObject = o;
             hoveredObject.EnterHover ();
         }
@@ -82,6 +82,8 @@ public class GameManager : Singleton<GameManager> {
     /// Handle a click on a Floor GameObject
     /// </summary>
     protected void HandleClickOnFloor (GameObject g, Vector3 clickPoint) {
+        if (verbose) Debug.Log ("Clicked on floor (" + g.name + ") at point " + clickPoint);
+
         if (selectedUnits.Count == 0) {
             return;
         }
@@ -98,6 +100,8 @@ public class GameManager : Singleton<GameManager> {
     /// Handle a click on a ControllableUnit
     /// </summary>
     protected void HandleClickOnControllableUnit (GameObject g, Vector3 clickPoint) {
+        if (verbose) Debug.Log ("Clicked on ControllableUnit (" + g.name + ")");
+
         // Grab a reference to the GameObject's ControllableUnit component
         ControllableUnit cu = g.GetComponentInParent<ControllableUnit> ();
         if (cu == null) return;
@@ -111,19 +115,32 @@ public class GameManager : Singleton<GameManager> {
         cu.SelectUnit ();
     }
 
+    /// <summary>
+    /// Handle a click on an InteractableObject
+    /// </summary>
+    protected void HandleClickOnInteractableObject (GameObject g) {
+        if (verbose) Debug.Log ("Clicked on InteractableObject (" + g.name + ")");
+
+        IInteractable interactable = g.GetComponent<IInteractable> ();
+        interactable.Click ();
+    }
+
 
     /// <summary>
     /// Toggle the game menu
     /// </summary>
     public void ToggleGameMenu () {
+        isMenuPaused = !isMenuPaused;
+        ToggleActivePause (false);
         UIManager.ToggleGameMenu ();
+        postProcessingEffects.AnimateDoF (isMenuPaused);
     }
 
 
     /// <summary>
     /// Pause/unpause the game by editing the scene's timescale
     /// </summary>
-    public void ToggleActivePause () {
+    public void ToggleActivePause (bool shouldAnimate) {
         isPaused = !isPaused;
         UIManager.TogglePauseIndicator ();
 
@@ -131,6 +148,7 @@ public class GameManager : Singleton<GameManager> {
             pauseableObject.Pause (isPaused);
         }
 
-        postProcessingEffects.AnimateVignette (isPaused);
+        if (shouldAnimate)
+            postProcessingEffects.AnimateVignette (isPaused);
     }
 }

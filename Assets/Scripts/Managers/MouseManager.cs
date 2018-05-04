@@ -16,8 +16,8 @@ public class MouseManager : MonoBehaviour {
         RaycastHit hit;
 
         if (Physics.Raycast (ray, out hit)) {
-            InteractableObject o;
-            if (o = hit.collider.gameObject.GetComponentInParent<InteractableObject> ()) {
+            IInteractable o;
+            if ((o = hit.collider.gameObject.GetComponentInParent<IInteractable> ()) != null) {
                 GameManager.Instance.HandleHoverOnInteractableObject (o);
             }
             else {

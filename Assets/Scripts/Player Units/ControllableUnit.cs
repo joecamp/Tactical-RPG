@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
+// TODO: Refactor into generic Unit that can be inherited for ControllableUnit and AI
 [RequireComponent (typeof (ControllableUnitMovement))]
-public class ControllableUnit : InteractableObject, IPauseable {
+public class ControllableUnit : MonoBehaviour, IInteractable, IPauseable {
     public enum UnitState { Paused, Idle, Moving };
     public UnitState state;
     public bool IsSelected {
@@ -25,19 +26,19 @@ public class ControllableUnit : InteractableObject, IPauseable {
     }
 
 
-    public override void Click () {
+    public void Click () {
         if (IsSelected) DeselectUnit ();
         else SelectUnit ();
     }
 
 
-    public override void EnterHover () {
+    public void EnterHover () {
         IsHovered = true;
         selectionRing.EnterMouseHover ();
     }
 
 
-    public override void ExitHover () {
+    public void ExitHover () {
         IsHovered = false;
         selectionRing.ExitMouseHover ();
     }
