@@ -3432,6 +3432,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183631253}
+        m_MethodName: AnimateLights
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnToggleOff:
@@ -3459,8 +3470,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 183631253}
+        m_MethodName: AnimateLights
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &183631253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 183631248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcb8ed076ecdaf49b1c174aa3bd89c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledColor: {r: 2.5, g: 2.5, b: 2.5, a: 0}
+  disabledColor: {r: 2.5, g: 0, b: 0, a: 0}
+  animationSpeed: 0.3
 --- !u!1 &187806044
 GameObject:
   m_ObjectHideFlags: 0
@@ -23919,6 +23955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945963676}
   - component: {fileID: 945963677}
+  - component: {fileID: 945963678}
   m_Layer: 8
   m_Name: Alpha_Joints
   m_TagString: Untagged
@@ -23954,7 +23991,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 119568181fd04364ba73b1d99bdca7a4, type: 2}
+  - {fileID: 2100000, guid: 60ea40e63dba4984aaa2886a2d228a1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24038,6 +24075,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000009536743, y: -0.19487926, z: 0.001876384}
     m_Extent: {x: 0.94527346, y: 0.7953514, z: 0.1378017}
   m_DirtyAABB: 0
+--- !u!114 &945963678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 945963675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5378d7b8d955d3a4aa1922658aef58cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glitchChance: 0.05
 --- !u!1 &948736863
 GameObject:
   m_ObjectHideFlags: 0
@@ -36968,6 +37017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917532203}
   - component: {fileID: 1917532204}
+  - component: {fileID: 1917532205}
   m_Layer: 8
   m_Name: Alpha_Surface
   m_TagString: Untagged
@@ -37003,7 +37053,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 358b1af3359a9e745bfda7e4efd254bd, type: 2}
+  - {fileID: 2100000, guid: 60ea40e63dba4984aaa2886a2d228a1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37087,6 +37137,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000009536743, y: -0.09565458, z: 0.021622837}
     m_Extent: {x: 0.97342485, y: 0.90236723, z: 0.18213426}
   m_DirtyAABB: 0
+--- !u!114 &1917532205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917532202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5378d7b8d955d3a4aa1922658aef58cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glitchChance: 0.05
 --- !u!1 &1921039780
 GameObject:
   m_ObjectHideFlags: 0

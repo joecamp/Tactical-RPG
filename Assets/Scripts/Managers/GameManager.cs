@@ -143,13 +143,14 @@ public class GameManager : Singleton<GameManager> {
     /// </summary>
     public void ToggleActivePause (bool shouldAnimate) {
         isPaused = !isPaused;
-        UIManager.TogglePauseIndicator ();
 
         foreach (IPauseable pauseableObject in FindObjectsOfType<MonoBehaviour> ().OfType<IPauseable> ()) {
             pauseableObject.Pause (isPaused);
         }
 
-        if (shouldAnimate)
+        if (shouldAnimate) {
+            UIManager.TogglePauseIndicator ();
             postProcessingEffects.AnimateVignette (isPaused);
+        }
     }
 }

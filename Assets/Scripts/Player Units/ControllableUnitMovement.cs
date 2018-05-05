@@ -15,7 +15,6 @@ public class ControllableUnitMovement : MonoBehaviour {
     [SerializeField] float movingTurnSpeed = 360;
     [SerializeField] float stationaryTurnSpeed = 180;
     [SerializeField] float moveSpeedMultiplier = 1f;
-    [SerializeField] float offMeshLinkSpeed = 5f;
 
     // References
     new Rigidbody rigidbody;
@@ -71,9 +70,9 @@ public class ControllableUnitMovement : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown (KeyCode.A)) {
+        /*if (Input.GetKeyDown (KeyCode.A)) {
             animator.SetTrigger ("EnterCode");
-        }
+        }*/
     }
 
 
