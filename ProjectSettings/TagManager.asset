@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - ControllableUnit
   - Interactable
+  - InteractableObject
+  - Hostile
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Unit
   - Obstacle
   - SelectionRing
-  - 
+  - Hostile
   - 
   - 
   - 
