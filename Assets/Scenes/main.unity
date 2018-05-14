@@ -1743,7 +1743,7 @@ GameObject:
   - component: {fileID: 81036321}
   m_Layer: 11
   m_Name: Ring Collider
-  m_TagString: ControllableUnit
+  m_TagString: Hostile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2842,6 +2842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statSheet: {fileID: 0}
   state: 0
+  combatType: 1
   targetMarker: {fileID: 721406888}
   pathStatus: 0
   movingTurnSpeed: 360
@@ -13398,6 +13399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statSheet: {fileID: 0}
   state: 0
+  combatType: 0
   targetMarker: {fileID: 1140943232}
   pathStatus: 0
   movingTurnSpeed: 360
@@ -18430,6 +18432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statSheet: {fileID: 0}
   state: 0
+  combatType: 1
   targetMarker: {fileID: 312900598}
   pathStatus: 0
   movingTurnSpeed: 360
@@ -29533,6 +29536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statSheet: {fileID: 0}
   state: 0
+  combatType: 0
   targetMarker: {fileID: 1906265529}
   pathStatus: 0
   movingTurnSpeed: 360

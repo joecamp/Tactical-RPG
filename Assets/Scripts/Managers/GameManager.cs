@@ -133,6 +133,10 @@ public class GameManager : Singleton<GameManager> {
 	}
 
 
+	/// <summary>
+	/// Handle a click on a Hostile Unit
+	/// </summary>
+	/// <param name="g"></param>
 	protected void HandleClickOnHostile (GameObject g) {
 		if (verbose) Debug.Log ("Clicked on Hostile (" + g.name + ")");
 

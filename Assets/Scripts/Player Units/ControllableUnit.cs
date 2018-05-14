@@ -16,8 +16,13 @@ public class ControllableUnit : MonoBehaviour, IInteractable, IPauseable {
 		MovingToAttack,
 		Attacking
 	};
+	public enum CombatType {
+		OHMelee,
+		Pistol
+	};
 	public UnitStatSheet statSheet;
 	public UnitStateEnum state;
+	public CombatType combatType;
 	public bool IsSelected { get; private set; }
 	public bool IsHovered { get; private set; }
 
@@ -44,14 +49,22 @@ public class ControllableUnit : MonoBehaviour, IInteractable, IPauseable {
 	[SerializeField] InteractableToggleObject targetInteractableObject;
 
 	protected void Awake () {
-		IsSelected = false;
-		state = UnitStateEnum.Idle;
-
 		selectionRing = GetComponentInChildren<SelectionRing> ();
 		agent = GetComponentInChildren<NavMeshAgent> ();
 		obstacle = GetComponent<NavMeshObstacle> ();
 		animator = GetComponent<Animator> ();
 		rigidbody = GetComponent<Rigidbody> ();
+	}
+
+
+	protected void Start () {
+		IsSelected = false;
+		state = UnitStateEnum.Idle;
+
+		if (combatType == CombatType.OHMelee)
+			animator.SetBool ("IsOHMelee", true);
+		else if (combatType == CombatType.Pistol)
+			animator.SetBool ("IsPistol", true);
 
 		agent.updateRotation = false;
 		agent.updatePosition = true;
@@ -335,6 +348,14 @@ public class ControllableUnit : MonoBehaviour, IInteractable, IPauseable {
 		targetInteractableObject.Click ();
 		targetInteractableObject = null;
 		state = UnitStateEnum.Idle;
+	}
+
+
+	// Callback method for equip weapon animations.
+	// Without this, the combat layer overrides the base layer before the
+	// unit has their weapon drawn.
+	public void DoneEquippingWeapon () {
+		animator.SetBool ("InCombat", true);
 	}
 
 
